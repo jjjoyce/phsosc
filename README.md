@@ -1,3 +1,3 @@
-# Simulation of pulse-coupled oscillators on annulus domain
+# Simulation of phase oscillators on annulus domain
 
-## pulse
+## Smooth Pulse Coupled oscillators
