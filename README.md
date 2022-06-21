@@ -1,1 +1,3 @@
-# pulse2d
+# Simulation of pulse-coupled oscillators on annulus domain
+
+## pulse
