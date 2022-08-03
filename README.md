@@ -15,7 +15,7 @@ Output is the relative phase (w.r.t. a fixed point on the annulus) at time $T$
 ## Smooth Pulse Coupled oscillators
 This code solve the following equation with a wave solution $u=\theta +f(r)$ on the annulus domain.
 
-$$\frac{d u}{d t} = 1 + \Detla(u)\int W(|x-x'|)P(u(x')) dx' $$
+$$\frac{d u}{d t} = 1 + \Delta(u)\int W(|x-x'|)P(u(x')) dx' $$
 
 $W$ is a Gaussian kernel, 
 $$W(r) = exp(-r^2)$$
