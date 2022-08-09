@@ -1,0 +1,37 @@
+del(u)=a*(sin(b)-sin(u+b))
+delp(u)=-a*cos(u+b)
+pul(u)=sqrt(gam)*exp(-gam*(1-cos(u)))/sqrt(2*pi)
+pulp(u)=-gam*sin(u)*pul(u)
+par l=.1
+par a=2,b=0.5,gam=50
+@ total=1,dt=.001
+u'=per*(1+del(u)*w)
+w'=l*wp
+wp'=l*(w-pul(u))
+per'=0
+b w-w'
+b wp-wp'
+b u
+b u'-(2*pi)
+lr'=0
+lm'=0
+vr'=per*(lm*vm-lr*vr+delp(u)*w*vr+del(u)*wr)
+vm'=per*(-lm*vr-lr*vm+delp(u)*w*vm+del(u)*wm)
+wr'=L*wrp
+wrp'=L*(wr-pulp(u)*vr)
+wm'=L*wmp
+wmp'=L*(wm-pulp(u)*vm)
+b wr-wr'
+b wm-wm'
+b wmp-wmp'
+b wrp-wrp'
+b vr-1
+b vr'-1
+b vm
+b vm'
+init u=0,per=6.28,vr=1,lm=0
+d
+# per=L/c where c is the velocity
+
+
+

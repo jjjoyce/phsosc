@@ -1,0 +1,19 @@
+del(u)=a*(sin(b)-sin(u+b))
+pul(u)=sqrt(gam)*exp(-gam*(1-cos(u)))/sqrt(2*pi)
+par l=10
+par a=2,b=0.5,gam=50
+@ total=1,dt=.01
+u'=per*(1+del(u)*w)
+w'=l*wp
+wp'=l*(w-pul(u))
+per'=0
+b w-w'
+b wp-wp'
+b u
+b u'-(2*pi)
+init u=0,per=6.28
+d
+# per=L/c where c is the velocity
+
+
+

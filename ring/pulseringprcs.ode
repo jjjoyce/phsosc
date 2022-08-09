@@ -1,0 +1,21 @@
+par L=10
+par d=1
+par b=0.5
+par a=1
+
+del(u) = a*(sin(b) - sin(u+b))*exp(d*(u-2*pi))
+kl(s) = (exp(L*(1-s))+exp(L*s))/(2*(exp(L)-1))
+
+u'=L/c+L*del(u)*kl(s)
+s' = 1
+c' = 0
+
+b u
+b u'-2*pi
+b s
+
+init s = 0, c=1.6
+@ dt=.001, total=1
+
+@ xhi = 0.5
+done

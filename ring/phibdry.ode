@@ -1,0 +1,30 @@
+
+par b=0
+par amp=.5
+del(u) = amp*(sin(b) - sin(u+b))
+delp(u) = -amp*cos(u+b)
+kl(s) = (exp(L*(1-s))+exp(L*s))/(2*(exp(L)-1))
+klp(s)= (-exp(L*(1-s))+exp(L*s))/(2*(exp(L)-1))
+lar=0
+
+u'=L/c+L*del(u)*kl(s)
+pr' = L*(((lam*pm-lar*pr)/c)+delp(u)*pr*kl(s)+lar*del(u)*kl(s)+c*del(u)*klp(s))
+pm' = L*(-((lar*pm+lam*pr)/c)+delp(u)*pm*kl(s)+lam*del(u)*kl(s))
+s' = 1
+c' = 0
+lam'=0
+L'=0
+
+b u
+b u'-2*pi
+b s
+b pr-1
+b pm
+b pr'-1
+b pm'
+
+init s = 0, c=1.44,  lam=1,pr=1,L=8.8
+@ dt=.001, total=1
+
+@ xhi = 0.5
+done

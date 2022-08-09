@@ -1,0 +1,18 @@
+del(u)=a*(sin(b)-sin(u+b))
+k(x)=sum(-10,10)of(exp(-(l*x+i'*l)^2))/sqrt(pi)
+par l=1
+par a=1,b=1
+@ total=1,dt=.01
+u'=per+l*k(s)*del(u)
+s'=1
+per'=0
+b s
+b u
+b u'-(2*pi)
+init u=0,s=0,per=6.28
+aux up=per+l*k(s)*del(u)
+d
+# per=L/c where c is the velocity
+
+
+
