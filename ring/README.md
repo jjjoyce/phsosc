@@ -9,7 +9,7 @@ with different PRCs
 
 # Solve eigenvalue problem, find critical value of $L$
 1. pulseringeigl.ode
-make plot of $L*$ vs $b$ with AUTO
+make plot of $L^*$ vs $b$ with AUTO
 2. pulseringeiglar.ode
 make plot of $\lambda$ vs $L$ with AUTO
 
@@ -18,6 +18,6 @@ make plot of $\lambda$ vs $L$ with AUTO
 ## Find solution
 smoothpulsering.ode
 ## Stablity
-smoothpulsestab.ode
-spsreal.ode
+1. smoothpulsestab.ode
+2. spsreal.ode
 
