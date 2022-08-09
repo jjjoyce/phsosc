@@ -15,8 +15,11 @@ make plot of $\lambda$ vs $L$ with AUTO
 
 
 # Smooth pulse coupling
+<<<<<<< HEAD
 ## Find solution
 smoothpulsering.ode
 ## Stablity
 smoothpulsestab.ode
 spsreal.ode
+=======
+>>>>>>> 75491c2ff1d5dfd14390d7fea691ffbbee757b2d
