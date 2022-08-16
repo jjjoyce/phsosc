@@ -1,0 +1,12 @@
+1. plot full solution from xpp; get fx; get omega2
+pul2dannxpp.m
+
+2. calculate approximation from MATLAB; get fm; get om2
+main_matrix.m
+
+3. compare f(r) when coupling is weak
+comparef.m
+
+4. compare vary a
+
+5. pulse smooth coupling
