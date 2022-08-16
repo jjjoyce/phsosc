@@ -1,0 +1,6 @@
+function g01=g01(a)
+global rho
+y=2.*a.^2;
+g01 = a.*pi.*...
+(besseli(0,y,1)+2*(rho-1)*besseli(1,y,1)+...
+besseli(2,y,1)-4*rho*besseli(2,y,1)+2*rho*besseli(3,y,1));

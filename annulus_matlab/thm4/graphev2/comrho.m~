@@ -1,0 +1,21 @@
+%% bstar vs a numerical 
+
+% rho=0
+load('bstar0.mat')
+bs0=bs;
+% rho=0.25
+load('bstar0.mat')
+bsp=bs;
+% rho=-0.25
+import 'bstarn025.mat' 'bs'
+bsn=bs;
+
+figure;
+plot(bs0);
+hold on
+plot(bsp);
+plot(bsn);
+
+xlabel('a');
+ylabel('b^*');
+legend('rho=0','rho=0.25','rho=-0.25');

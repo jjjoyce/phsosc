@@ -1,0 +1,6 @@
+function g1=g1(a)
+y=2.*a.^2;
+g1 = -(1/2).*pi.*...
+    ((-1+4*y).*besseli(0,y,1)+(2-7*y).*besseli(1,y,1)-besseli(2,y,1)+...
+4.*y.*besseli(2,y,1)-y.*besseli(3,y,1));
+   

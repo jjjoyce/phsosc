@@ -1,0 +1,8 @@
+%% Compare eigenvalue using pertubation
+
+load('sab.mat', 'sab');
+a=sab(:,1);
+b=sab(:,2);
+
+x=1.54513;
+

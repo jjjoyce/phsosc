@@ -1,0 +1,37 @@
+1. num1:
+
+    main.m: 
+	find f(r) using getFcf(N)
+	uncomment plott(fcf) to plot u on an 200*200 annulus
+	uncomment getOmega to calculate Omega
+
+	fenda2b10.mat:
+	f(b) vs alpha, corresponding to Fig.4 (a)
+
+	omvsalpha.mat:
+	Omega vs alpha, coresponding to Fig.4 (b)
+
+2. eig:
+
+	loops.m:
+	change alpha, find eigenvalue lambda using equation (69)
+
+	msal**.mat:
+	save data Ms = [alpha a b eigv f(r)];
+
+	alphavsa.mat:
+	corresponding to Fig.9
+	alpha vs astar0 (the lowest a to solve f) and astar (where eigenvalue changes)
+
+3. num3(fastf):
+
+	main.m:
+	use linear approximation to calculate f(r)
+
+4. thm4(graphev):
+
+	grah1.m:
+	Plot eigenvalues in Thm4 Fig.6 and Fig.7
+
+5. sab.mat
+	b*vs
