@@ -1,9 +1,11 @@
 readme
 
-pulsegaussian.m
+pulsmooth2d.m
 
-make animation of pulse-like coupling on annulus
+make animation of smooth pulse coupling on annulus and disks
 
 final phase state saved in v_pul2da0.2b5d0amp1.mat 
 
-f(r) saved in f_pul2da0.2b5d0amp1.mat 
+plotpul2d.m
+
+generate screenshot of final phase state
