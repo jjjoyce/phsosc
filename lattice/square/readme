@@ -1,0 +1,20 @@
+# Simulation of square lattice
+
+## sqrNodd.c
+use one_loop(b1,b2,n,nr2) to simulate
+
+domain size is N*N, where N=2*n+1
+
+nr2 is inner radius squared
+
+outputs:
+
+1. `f_r2_0b1_0.4b2_0n_100nr2_0.dat`: f(r0) to f(1)
+2. `uh_b1_0.4b2_0n_100nr2_0.dat`: u on disk/annulus 
+3. `uhd_b1_0.4b2_0n_100nr2_0.dat`: u-theta on disk/annulus 
+4. `output_sqrNodd_n_100.dat`: save screen output including om, fend
+
+## sqrplot.m
+
+## spirbvp.ode
+ode approximation
