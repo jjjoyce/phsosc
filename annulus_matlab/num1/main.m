@@ -3,7 +3,7 @@
 % a=2;b=10;
 
 global al 
-al = 0.3;
+al = 0;
 
 global N
 

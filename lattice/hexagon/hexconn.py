@@ -93,8 +93,8 @@ def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
                         sumh += h(u3-u0)
 
                     om[i,j]=sumh
-                    u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n])+onepi)%twopi-onepi
-
+                    #u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n])+onepi)%twopi-onepi
+                    u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n]))
 
         if (t%100==0):
 
@@ -106,12 +106,12 @@ def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
     # calculate f(r), direction 9:00 (tri pictures are horizental flipped compared to sqr)
     fr = u[n,1]-u[n,n];
 
-    coef='tri_'+'n_'+str(n)+'b1_'+str(b1)+'b2_'+str(b2)+'_'
+    coef='full_tri_'+'n_'+str(n)+'b1_'+str(b1)+'b2_'+str(b2)+'_'
     np.savetxt(coef+'u'+'.dat', u ,fmt='%1.4e')
 
     
     #filename = coef+'om&t'+'.dat' 
-    filename = "tri_output.dat"
+    filename = "tri_output_full.dat"
     with open(filename, 'at') as fout:
         fout.write(coef+'\n')
         fout.write(str(om[n][n])+'\n')
@@ -130,6 +130,6 @@ if __name__ == "__main__":
     one_loop(25,1,0,0,0.1)
     one_loop(50,1,0,0.4,0)
     one_loop(50,1,0,0,0.1)
-    one_loop(50,1,0,0.2,0)
-    one_loop(50,1,0,0,0.05)
+    #one_loop(50,1,0,0.2,0)
+    #one_loop(50,1,0,0,0.05)
 

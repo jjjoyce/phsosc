@@ -3,6 +3,7 @@ function plott(fcf)
 [alpha a b] = getVariable;
 fm = fcf;
 m = zeros(200,200);
+m1 = m;
 for i = 1:1:200
     for j = 1:1:200
         x = (i-100)./100*10;
@@ -11,11 +12,11 @@ for i = 1:1:200
         r = sqrt(x^2+y^2);
         %m(i,j) = mod(xi-0.25*r+2*pi,2*pi);
         m(i,j) = mod(xi-fm(getIndex(r))+2*pi,2*pi);
-        if (r<a)||(r>b) m(i,j)=NaN;
+        if (r<a)||(r>b) m1(i,j)=NaN;
         end;
     end;
 end;
-h = pcolor(m);
+h = pcolor(m1);
 set(h, 'EdgeColor', 'none');
 colormap('hsv');
 
