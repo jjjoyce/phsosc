@@ -1,7 +1,6 @@
-## simulation on a triangle mesh
+## simulation on a hexagonal lattice
 
-total square domain size: (2*n+1)*(2*n+1)
+total square domain size: $(2*n+1)*(2*n+1)$
 
-horizental points are twice as vertical points
 
-a circle on square domain after scaling is an ellipse (squzzed vertically)
+

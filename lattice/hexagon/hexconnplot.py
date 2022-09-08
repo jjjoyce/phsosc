@@ -95,8 +95,8 @@ def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
                         sumh += h(u3-u0)
 
                     om[i,j]=sumh
-                    #u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n])+onepi)%twopi-onepi
-                    u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n]))
+                    u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n])+onepi)%twopi-onepi
+                    #u[i,j]=(u[i,j]+dt*(om[i,j]-om[n,n]))
 
         if (t%100==0):
 
@@ -135,11 +135,12 @@ def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
     axs.set_aspect('equal')
 
     im = axs.scatter(m[:,:,0], m[:,:,1], c=u, s = 3, cmap='hsv')
+    fig.colorbar(im, ax=axs)
     im = axs.scatter(m[:,:,0], m[:,:,1], c=uu, s = 3, cmap='twilight')
-    
     fig.savefig('hexs50.eps', format='eps')
     
     plt.show()
+
     
     elapsed = time.time() - ti
     print( "%5.2f" % elapsed)
