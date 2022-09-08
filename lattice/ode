@@ -1,0 +1,16 @@
+# spirbvp
+par r0=.5
+par r1=1
+par al=1,bet=0
+om'=0
+!dr=r1-r0
+r'=dr
+b r-r0
+init r=.5
+b v
+b v'
+v'=dr*(om-bet*(v^2+1/r^2)-al*v/r)/al
+f'=dr*v
+b f
+@ dt=.01,total=1
+d

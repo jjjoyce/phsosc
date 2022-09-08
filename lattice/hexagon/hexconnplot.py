@@ -2,12 +2,13 @@ import numpy as np
 import math
 import time
 import os
+import matplotlib.pyplot as plt
 
 ti = time.time()
 
 def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
 
-    T = 10000
+    T = 100
     dt = 0.2
 
     def h(x: float):
@@ -20,6 +21,7 @@ def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
     nr2 = n*n-1
     m = np.zeros((2*n+1,2*n+1,3),dtype='float32') # (x,y,z) z=0 up (connect to i+1)
     u = np.zeros((2*n+1,2*n+1),dtype='float32') # phase 
+    uu = np.zeros((2*n+1,2*n+1),dtype='float32') # phase 
     om = np.zeros((2*n+1,2*n+1),dtype='float32')
 
     x0 = np.linspace(0, sqr33*(2*n), (2*n+1),dtype='float32')
@@ -119,18 +121,36 @@ def one_loop(n: int, a1: float, a2: float, b1:float, b2:float):
         fout.write(str(t))
         fout.write('\n')
 
+    # for plot
 
+    for i in range(2*n+1):
+        for j in range(2*n+1):
+            if math.isnan(u[i,j]):
+                uu[i,j]=10
+            else:
+                uu[i,j]=np.nan 
+
+    fig, axs = plt.subplots()
+    fig.set_dpi(300)
+    axs.set_aspect('equal')
+
+    im = axs.scatter(m[:,:,0], m[:,:,1], c=u, s = 3, cmap='hsv')
+    im = axs.scatter(m[:,:,0], m[:,:,1], c=uu, s = 3, cmap='twilight')
+    
+    fig.savefig('hexs50.eps', format='eps')
+    
+    plt.show()
+    
     elapsed = time.time() - ti
     print( "%5.2f" % elapsed)
 
 
     # h(u)
 if __name__ == "__main__":
-    #one_loop(25,1,0,0.4,0)
+    one_loop(25,1,0,0,0)
     #one_loop(25,1,0,0,0.1)
     #one_loop(50,1,0,0.4,0)
     #one_loop(50,1,0,0,0.1)
     #one_loop(50,1,0,0.2,0)
     #one_loop(50,1,0,0,0.05)
-    one_loop(25,1,0,0,0)
 
